@@ -5,6 +5,10 @@ MAINTAINER John S. Lutz <jlutz@broadiq.com>
 
 ENV SERVER_PORT 8077 
 
+RUN adduser nfsnobody
+RUN groupadd nfsnobody
+
+
 VOLUME /exports
 ADD NfsManager-0.0.1-SNAPSHOT.jar app.jar
 
